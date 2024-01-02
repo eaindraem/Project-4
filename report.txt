@@ -1,0 +1,121 @@
+﻿Melody Myae
+CS 31
+Smallberg
+Project 4 Report
+
+
+1. A notable obstacle I overcame during this project was figuring out the divide function. I had no idea how to do this function. I tried multiple ways and wrote it down on a paper as well. It didn’t work. I got a sudden solution to order the array chronologically when I was eating at De Neve, and it worked. 
+
+
+2. A list of test cases that can be used to test the program. 
+
+
+Test Cases
+	Reasons
+	string case5[2] = { " ", "#$" };
+       assert(reduplicate(case5, 2) == 2);
+       assert(case5[0] == " ");
+       assert(case5[1] == "#$#$");
+	To test that reduplicate function handles special characters as well as empty spaces correctly. 
+	string case3[4] = { "red", "blue", "green", "yellow" };
+        
+assert(locate(case3, 4, "orange") == -1);
+	To test the locate function where the target string doesn’t occur
+	string case8[4] = { "#", "$%", "#", " " };
+        
+assert(locate(case8, 4, "#") == 0);
+	To test the locate function with special characters that occur multiple times, also with empty space. 
+	string h[7] = { "nikki", "nikki", "nikki", "nikki", "nikki", "nikki", "nikki" };
+
+
+assert(locationOfMax(h, 7) == 0);
+	To test locationOfMax function gives the smallest position when there are more than one max string. 
+	string h[7] = { "", "", "", "", "", "", "" };
+
+
+assert(locationOfMax(h, 7) == 0);
+	To test locationOfMax function handles an array with all empty string as more than one max string (OR) none is biggest 
+	string cand[6] = { "vivek", "asa", "ron", "vivek", "chris", "nikki" };
+
+
+int k = locationOfMax(cand, 6);
+	To test the function return the index of max string and return the smaller string when more than one max string. 
+	string running[5] = { "nikki", "donald", "asa", "tim", "ron" };
+    
+circleLeft(running, 5, 4);
+	To test circleLeft function can move elements one position ahead and assign the target element to the last position
+	string running[5] = { "nikki", "donald", "asa" };
+    
+circleLeft(running, 5, 1);
+	To test circleLeft function can recognize not all elements are initialized and still assign the target element to the last position
+	string d[5] = { "ron", "ron", "ron", "chris", "chris" };
+
+
+enumerateRuns(d, 5) == 2);
+	To test if the function recognizes consecutive strings and return right integer
+	string d[5] = { "ron", "ron", "", "", "chris" };
+    
+int p = enumerateRuns(d, 5);
+	To test that the function recognizes empty strings as identical strings 
+	string folks[6] = { "donald", "tim", "", "chris", "nikki", "donald" };
+
+
+flip(folks, 4);
+	To test that the function flips even amount of elements well, including empty space
+	string f[3] = { "vivek", "asa", "tim" };
+
+
+flip(f, 3);
+	To test that the function flips odd amount of elements well
+	string case8a[4] = { "#", "$%", "!" , " "};
+string case8b[5] = { "#", "$%", "!" , " " };
+        
+assert(locateDifference(case8a, 4, case8b, 5) == 4);
+	To test if the locateDifference function with special characters + empty strings + arrays of unequal size. 
+	string case7a[6] = { "a", "b", "c", "%", "e", "f" };
+string case7b[1] = { "%" };
+        
+assert(subsequence(case7a, 6, case7b, 1) == 3);
+	To test subsequence function when second array is only a match of one element in first array 
+	string case8a[4] = { "x", "y", "z", "w" };
+string case8b[0] = {};
+        
+assert(subsequence(case8a, 4, case8b, 0) == 0);
+	To test subsequence function when the second array is an empty string - is a subsequence of any. 
+	string case10a[3] = { "#", "$%", "!" };
+string case10b[2] = { "$%", "!" };
+        
+assert(locateAny(case10a, 3, case10b, 2) == 1);
+	To test locateAny function with special characters 
+	string case11a[3] = { "AbC", "dEf", "GhI", “%%” };
+string case11b[2] = { "aBc", "GHi" };
+        
+assert(locateAny(case11a, 3, case11b, 2) == -1);
+	To test locateAny with mixed case 
+	string names[10] = { "nikki", "ron", "tim", "vivek", "doug" };
+string set2[10] = { "chris", "asa" };
+
+
+int w = locateAny(names, 6, set2, 2);
+	To test that the function recognize when there aren’t same combination in the arrays 
+	string h[7] = { "nikki", "chris", "asa", "vivek", "", "chris", "donald" };
+    
+assert(divide(h, 7, "donald") == 3);
+	To test that the function arranges the array well when empty space, repeating elements, and divide are part of the array. And to test that the function returns the number of elements less than the divider, not including the divider.
+	string case7[3] = { "orange", "apple", "banana" };
+
+
+assert(divide(case7, -3, "apple") == -1);
+	To test that the function recognizes the negative array size as an error 
+
+
+(all functions passed this test)
+	Other test cases include passing in array size 0 for all the functions
+	To test that the function recognizes if the 0 array size is error or not, depending on the array. 
+	
+
+
+
+
+
+My program passes all the above test cases.
